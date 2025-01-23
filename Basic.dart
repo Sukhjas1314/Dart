@@ -1,7 +1,13 @@
 void main() {
+  // To get output
+  print('Hi everyone');
+
+
+  
   // string property
   String value = '3564d5';
   print(value.length);
+
 
   
   //using shortcuts for operations using operators
@@ -15,6 +21,7 @@ void main() {
   print(first);
 
 
+  
   // String manipulation/updation
   String greeting = 'Hello World';
   print(greeting);
@@ -38,6 +45,7 @@ void main() {
   greeting = 'Why are you so happy\nwhy???';                  // '\n' is used as enter/move to next line
   print(greeting);
 
+
   
   // var/final/const variableName = value
   var first = '32';                    // mutable variable
@@ -55,16 +63,74 @@ void main() {
   print(second);
   print(third);
 
+
+  
   // final is runtime variable 
   final someValue = DateTime.now();        // Determines and store the current date and time
   print(someValue);
 
+
+
   // optional variable /null variable
   // string/int/bool and null
-  String? someValue2 = null;               // For nullable variable use ? afyter the variable type
+  String? someValue2 = null;               // For nullable variable use ? after the variable type
   int? some = null;
 
   print(someValue2);
   print(some);
+
+  String? someValue;
+  print(someValue);
   
+  print(someValue?.length??0);              // For Users to see something other than null like 0
+
+
+    
+  // If statements
+  int age = 18;
+  if(age > 18){                              // Use of '>'
+    print('Adult');
+  }
+  else if(age == 18){                          // Use of '=='
+    print('You just became an adult');
+  }
+  else{
+    print('Child');
+  }
+
+
+
+  int age1 = 32;
+  bool isadult = false;
+  if(age1 != 18 && !isadult){                  // Use of '&&' , '!=' & '!'
+    print('Haha');
+  }
+  else if(age1 <= 15 || age1 >= 12){            // Use of '>=' & '<=' 
+    print('Hana');
+  }
+  else{
+    print('Naha');
+  }
+
+
+
+  // Ternary operator
+  String value1 = 'Hi';
+  String value2 =  value1.startsWith('H') ? 'Wow' : 'Nope';            // '.startsWith' is a property of strings 
+  print(value2);
+
+
+
+  // Switch statement
+  String traffic = 'green';
+  switch(traffic){
+    case 'red' :
+      print('Stop!!');
+    case 'yellow' :
+      print('Ready!!');
+    case 'green' :
+      print('Go');
+    default :
+      print('Invalid signal');
+  }
 }

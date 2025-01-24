@@ -182,14 +182,93 @@ void main() {
 void printName(){
   print('Sukhman');
 }
+
+
 int value(){
     return 471;
 }
+
+
+(int,String,int,bool,String) print1(){
+  return (13,'Sukhman',10,true,'Singh');
+}
+
+
+String? isAdult1(){                       // for a nullified function
+  return null;
+}
+
+
+void function(String name){               // function with a parameter as an argument
+  print(name);
+}
+
 
 void main() {
   printName();
   printName();
   printName();
+  print('\n');
+
   
   print(value());
+  print('\n');
+
+  
+  // var data = print1();
+  // or
+  var (dob,name,yr,isAdult,surname) = print1();
+  // print(data);
+  print('\n');
+  // print(data.$1);
+  // print(data.$2);
+  // print(data.$3);
+  // print(data.$4);
+  // print(data.$5);
+  print(dob);
+  print(name);
+  print(isAdult);
+  print(yr);
+  print(surname);
+
+  
+  print('\n');
+  print(isAdult1());
+
+
+  print('\n');
+  function('Sukhman');
+}
+
+
+
+// Use of required keyword
+void printName(int age,bool isAdult,{required String firstName,required String lastName}){
+  print(firstName);
+  print(lastName);
+  print(age);
+  print(isAdult);
+}
+void main(){
+  printName(20,true,lastName : 'Singh',firstName : 'Sukhmanpreet');
+}
+
+
+
+// Use of multi datatyped function with arguments
+({int age,String name}) fun(){
+  return (age : 20,name : 'Sukhman');
+}
+void main(){
+  final fun1 = fun();
+  print(fun1.age);
+  print(fun1.name);
+}
+
+
+
+// Arrow function
+void name() => print('Sukhman');
+void main(){
+  name();
 }

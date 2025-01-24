@@ -133,4 +133,63 @@ void main() {
     default :
       print('Invalid signal');
   }
+
+
+
+  // Loops
+  //For Loops
+  for(int i = 0 ; i <= 10 ; i++){
+    print(hi.substring(i,13));
+    print('Hello world - $i');
+  }
+
+
+  String hi = 'Hello World!!';
+  for(int i = 0 ; i < hi.length ; i++){
+    print(hi[i]);
+  }
+
+  // while loop
+  String hi1 = 'Hello World';
+  int i = 0;
+  while(i < hi1.length){
+    print(hi1[i]);
+    i++;
+  }
+
+
+  // do while loop
+  String hi2 = 'Hello World!';
+  int i = 0;
+  do{
+    print(hi2[i]);
+    i++;
+  }while(i < hi2.length);
+
+
+
+  // Continue statement
+  String hi3 = 'Hello World!!';
+  for(int i = 0 ; i < hi3.length ; i++){
+    if(i % 2 == 0){
+      continue;
+    }
+    print(hi3[i]);
+  }
+}
+
+  // functions
+void printName(){
+  print('Sukhman');
+}
+int value(){
+    return 471;
+}
+
+void main() {
+  printName();
+  printName();
+  printName();
+  
+  print(value());
 }

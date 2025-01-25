@@ -272,3 +272,158 @@ void name() => print('Sukhman');
 void main(){
   name();
 }
+
+
+
+// Classes
+class Cookie{
+  String shape = 'Circle';
+  double size = 15.4;   //cm
+  
+  void baking(){
+    print('Baking has started');
+  }
+  bool isCooling(){
+    return false;
+  }
+}
+void main() {
+  // print('The shape of the cookie : ${Cookie().shape}');
+  // print('${Cookie().size} cm');
+  // Cookie().baking();
+  // print(Cookie().isCooling());
+
+  // or
+
+  Cookie c1 = Cookie();
+  print('The shape of the cookie : ${c1.shape}');
+  print('${c1.size} cm');
+  c1.baking();
+  print(c1.isCooling());
+}
+
+
+class Cookie{
+  String shape;
+  double size; //cm
+  Cookie(this.shape,this.size){
+     print('Cookie Constructor is called');
+     baking();
+  }
+  void baking(){
+    print('Baking has started');
+  }
+  bool isCooling(){
+    return false;
+  }
+}
+
+void main() {
+  Cookie c1 = new Cookie('Rect',20.5);
+  
+  print('The shape of the cookie : ${c1.shape}');
+  print('${c1.size} cm');
+}
+
+
+
+class Rectangle{
+  // private variables
+  double _height = 4;
+  double _width = 5;
+  Rectangle(double height,double width){
+    this._height = height;
+    this._width = width;
+    calculatePerimeter();
+  }
+  
+  // method
+  void calculatePerimeter(){
+    var p = 2*(_height + _width);
+    print('The perimeter : ${p}');
+  }
+}
+
+void main(){
+  Rectangle(34.5,2.5);
+}
+
+
+
+class Rectangle{
+  final String shape;
+  final double size;
+  // private variables
+  double _height = 4;
+  double _width = 5;
+  
+  Rectangle({required this.shape,required this.size}){
+    baking();
+  }
+  
+  // getter function
+  double get height => _height;
+
+  // setter function
+  set setHeight(double h){
+    _height = h;
+  }
+  // method
+  void baking(){
+    print('Your order of ${size}cm of ${shape} cookie is being prepared');
+  }
+}
+
+void main(){
+  final r1 = Rectangle(shape : 'Hello',size : 2.5);
+  print(r1.height);
+  r1.setHeight = 54;
+  print(r1.height);
+}
+
+
+
+class Constants{
+  Constants(){
+    print('This is the constructor');
+  }
+  // static variables
+  static String greeting = 'Hi,Ho are you?';
+  static String bye = 'Bye,See you soon!';
+  
+  // static function
+  static int giveSomeValue(){
+    return 10;
+  }
+}
+void main(){
+  print(Constants.greeting);
+  print(Constants.bye);
+  print(Constants.giveSomeValue());
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

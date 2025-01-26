@@ -430,10 +430,9 @@ class Truck extends Vehicle{
     print(noOfWheels);
   }
 }
-
 void main(){
-  Car car = Car();
-  car.printSomething();
+  Vehicle car = Car();              // If Instead of Car we use Vehicle it will give error only in the properties which are not from the vehicle class
+  print((car as Car).noOfWheels);           // to solve this '(objectName as DerivedClass).propertyname' will work
   print(car.isEngineWorking);
   
   Truck truck = Truck();
@@ -442,6 +441,95 @@ void main(){
 }
 
 
+// use of override
+class SomeClass{
+  int speed = 10;
+  
+  void accelerate(){
+    speed += 30;
+  }
+}
+
+class Vehicle extends SomeClass{
+  bool isEngineWorking = false;
+  bool isLightOn = true;
+  
+  @override
+  void accelerate(){
+    speed += 60;
+  }
+}
+
+class Car extends Vehicle{
+  int noOfWheels = 4;
+  
+  void printSomething(){
+    print(noOfWheels);
+  }
+}
+
+class Truck extends Vehicle{
+  int noOfWheels = 8;
+  
+  void print1(){
+    print(noOfWheels);
+  }
+}
+
+void main(){
+  final car = Car();
+  car.accelerate(); 
+  print(car.speed);
+}
+
+
+// Use of implement & extends
+class SomeClass{
+  bool isEngineWorking = false;
+  bool isLightOn = true;
+  int noOfWheels = 4;
+}
+
+class Vehicle{
+  void accelerate(){
+    print('Accelerating vehicle');
+  }
+}
+
+class Car extends SomeClass implements Vehicle{
+  @override
+  void accelerate(){
+    print('Accelerating vehicle');
+  }
+  void printSomething(){
+    print(isEngineWorking);
+    print(isLightOn);
+    print(noOfWheels);
+  }
+}
+
+void main(){
+  final car = Car();
+  car.accelerate(); 
+  car.printSomething();
+}
+
+// Abstract class
+abstract class Vehicle{
+  void accelerate();
+}
+
+class Car implements Vehicle{
+  @override
+  void accelerate(){
+    print('Accelerating vehicle');
+  }
+}
+
+void main(){
+  final car = Car();
+  car.accelerate(); 
+}
 
 
 

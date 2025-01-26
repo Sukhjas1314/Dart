@@ -404,6 +404,45 @@ void main(){
 
 
 
+// Inheritance (Oops)
+class Vehicle{
+  int speed = 10;
+  bool isEngineWorking = false;
+  bool isLightOn = true;
+  
+  void accelerate(){
+    speed += 10;
+  }
+}
+
+class Car extends Vehicle{
+  int noOfWheels = 4;
+  
+  void printSomething(){
+    print(noOfWheels);
+  }
+}
+
+class Truck extends Vehicle{
+  int noOfWheels = 8;
+  
+  void print1(){
+    print(noOfWheels);
+  }
+}
+
+void main(){
+  Car car = Car();
+  car.printSomething();
+  print(car.isEngineWorking);
+  
+  Truck truck = Truck();
+  print(truck.noOfWheels);
+  print(truck.isEngineWorking);
+}
+
+
+
 
 
 

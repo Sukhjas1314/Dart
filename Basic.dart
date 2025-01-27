@@ -533,6 +533,65 @@ void main(){
 
 
 
+// Polymorphism
+class Animal{
+  void sound(){
+    print('Animal makes sound'); 
+  }
+}
+
+class Cat extends Animal{
+  @override
+  void sound(){
+    print('Cat makes sound'); 
+  }
+}
+
+class Dog extends Animal{
+  @override
+  void sound(){
+    print('Dog makes sound'); 
+  }
+}
+
+void main() {
+  Animal cat = Cat();
+  cat.sound();
+  cat = Dog();
+  cat.sound();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

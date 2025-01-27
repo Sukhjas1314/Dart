@@ -616,9 +616,32 @@ void main(){
 
 
 // Class Modifiers
+sealed class Animal{}                // sealed is used instead of abstract
 
+class Human extends Animal{}
 
+class Dog extends Animal{}
 
+class Cat extends Animal{}
+
+void main(){
+  Animal animal = Human();
+  switch(animal){
+    case Dog() :
+      print('Dog');
+    case Human():
+      print('Human');
+    case Cat():
+      print('Cat');
+  }
+}
+
+// Generally used
+sealed class Animal{}
+final class Animal1{}
+base class Animal2{}
+interface class Animal3{}
+mixin class Animal4{}
 
 
 

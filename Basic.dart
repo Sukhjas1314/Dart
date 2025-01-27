@@ -533,7 +533,7 @@ void main(){
 
 
 
-// Polymorphism
+// Polymorphism (many forms) 
 class Animal{
   void sound(){
     print('Animal makes sound'); 
@@ -563,7 +563,7 @@ void main() {
 
 
 
-// Abstraction (Hidding details and showing only essential ones
+// Abstraction (Hidding details and showing only essential ones and using abstract classes)
 abstract class Animal{
   void sound();
 }
@@ -588,6 +588,35 @@ void main() {
   Animal animal2 = Dog();
   animal2.sound();
 }
+
+
+
+// Mixins
+mixin Jump{
+  int jumping = 10;
+  
+}
+
+mixin Scream{
+  bool isScreaming = false;
+}
+
+class Animal with Jump,Scream{
+  void fn(){
+    print(jumping);
+    print(isScreaming);
+  }
+}
+
+void main(){
+  final anim = Animal();
+  anim.fn();
+}
+
+
+
+// Class Modifiers
+
 
 
 

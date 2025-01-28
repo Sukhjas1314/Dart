@@ -669,6 +669,32 @@ void main(){
 }
 
 
+// Using class in list
+class Student{
+  final String name;
+  
+  Student(this.name);
+}
+
+void main(){
+  List students = [
+    Student('Sukhman'),
+    Student('Daksh'),
+    Student('Harith'),
+    Student('Arsh'),
+    Student('Eshaan')
+  ];
+    
+  final student = students[0];
+  if(student is Student){
+    print(student.name);
+  }
+  else{
+    print(student);
+  }
+}
+
+
 
 
 

@@ -695,6 +695,34 @@ void main(){
 }
 
 
+// Insertions/Updation
+class Student{
+  final String name;
+  
+  Student(this.name);
+  
+  @override
+  String toString() => 'Student : ${name}';
+}
+void main(){
+  List<Student> students = [
+    Student('Sukhman'),
+    Student('Daksh'),
+    Student('Harith'),
+    Student('Arsh'),
+    Student('Eshaan')
+  ];
+  print(students);
+  
+  students[4] = Student('Swayam');    // Helps to update the value
+  print(students);
+  
+  students.add(Student('Eshaan'));    // To add at the end
+  print(students);
+  
+  students.insert(3,Student('Yash'));   // To insert at any index
+  print(students);
+}
 
 
 

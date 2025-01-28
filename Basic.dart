@@ -751,4 +751,34 @@ void main(){
 }
 
 
+// Filtering out students
+class Student{
+  final String name;
+  final int marks;
+  
+  Student(this.name,this.marks);
+  
+  @override
+  String toString() => 'Student : ${name} - ${marks}';
+}
+void main(){
+  List<Student> students = [
+    Student('Sukhman',100),
+    Student('Daksh',60),
+    Student('Harith',98),
+    Student('Arsh',78),
+    Student('Eshaan',85)
+  ];
+  print(students);
+  print('\n');
+  
+  List<Student> filteredStudents = [];                    // Making an empty list where we will store the filtered out data
+  for(int i = 0 ; i < students.length ; i++){
+    if(students[i].marks > 90){
+      filteredStudents.add(students[i]);
+    }
+  }
+  print(filteredStudents);
+}
+
 

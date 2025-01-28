@@ -725,49 +725,30 @@ void main(){
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Removal of elements
+class Student{
+  final String name;
+  
+  Student(this.name);
+  
+  @override
+  String toString() => 'Student : ${name}';
+}
+void main(){
+  final Arsh = Student('Arsh');
+  
+  List<Student> students = [
+    Student('Sukhman'),
+    Student('Daksh'),
+    Student('Harith'),
+    Arsh,
+    Student('Eshaan')
+  ];
+  print(students);
+  
+  students.remove(Arsh);
+  print(students);
+}
 
 
 

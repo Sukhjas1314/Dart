@@ -658,7 +658,15 @@ void main(){
   print(list[8]);
   print(list[6]);
 }      
-  
+
+
+void main(){
+  List list = [10,20,30,40,'Hello',false];            // By default the values can be of dynamic datatype
+  print(list);
+  print('\n');
+  print(list[0]);
+  print(list[4]);
+}
 
 
 

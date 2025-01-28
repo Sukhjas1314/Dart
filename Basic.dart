@@ -647,11 +647,18 @@ mixin class Animal4{}
 
 // List
 void main(){
-  //  to print [10,20,30,40,50,60,70,80,90] as a whole 
+  // List
+  // [10,20,30,40,50,60,70,80,90]
   
-  List list = [10,20,30,40,50,60,70,80,90];          // List is an abstract class used to store and manipulate lists
+  List list = [10,20,30,40,50,60,70,80,90];              // List is an abstract class used to store and manipulate lists
   print(list);
-}
+  print('\n');
+  print(list[0]);
+  print(list[2]);
+  print(list[8]);
+  print(list[6]);
+}      
+  
 
 
 

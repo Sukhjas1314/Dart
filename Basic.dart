@@ -784,10 +784,10 @@ void main(){
   //     filteredStudents.add(student);
   //   }
   // }
+  // print(filteredStudents);
               // or
   final filteredStudents = students.where((student) => student.marks >= 90);
-
-  print(filteredStudents);
+  print(filteredStudents.toList());
 }
 
 

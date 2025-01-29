@@ -858,18 +858,58 @@ void main(){
     'Daksh' : 92,
     'Harith' : 95
   };
-  print(marks);
+  print(marks);                             // Accessing full map
   print('\n');
   
-  print(marks['Sukhman']);
+  
+  print(marks['Sukhman']);                  // Accessing value from the key
   print('\n');
-
-  if(marks['Harith'] == null){
+  
+  
+  if(marks['Harith'] == null){              // Checking if the key-value exist & value is even?
     print("Key Doesn't exists");
   }
   else{
     print(marks['Harith']!.isEven);
   }
+  print('\n');
+  
+  
+  marks['Arsh'] = 89;                       // Adding a new value at the end of the map
+  print(marks);
+  print('\n');
+  
+  
+  marks['Daksh'] = 84;                      // Updating the value of any key
+  print(marks);
+  print('\n');
+  
+  
+  marks.addAll({                            // Adding many key-value pairs at the end of the already made map
+    'Eshaan' : 85,
+    'Swayam' : 89,
+    'Yash' : 90
+  });
+  print(marks);
+  print('\n');
+  
+  
+  marks.remove('Swayam');                   // Removing a key-value pair by just mentioning the key
+  print(marks);
+  print('\n');
+  
+  
+  print('The students and their marks are :');
+//   for(int i = 0 ; i < marks.length ; i++){                                // For iterating the whole map
+//     print('${marks.keys.toList()[i]} : ${marks.values.toList()[i]}');
+//   }
+//   print('\n');
+  
+          // or
+  marks.forEach((key,val) {
+    print('${key} : ${val}');
+  });
+  print('\n');
 }
 
 

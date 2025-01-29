@@ -786,10 +786,41 @@ void main(){
   // }
   // print(filteredStudents);
               // or
+  
   final filteredStudents = students.where((student) => student.marks >= 90);
   print(filteredStudents.toList());
+
+  print(students.reversed.toList());                      // To reverse the list and be in a list format
+  print('\n');
 }
 
+
+
+// Sets
+class Student{
+  final String name;
+  final int marks;
+  
+  Student(this.name,this.marks);
+  
+  @override
+  String toString() => 'Student : ${name} - ${marks}';
+}
+void main(){
+  final arsh = Student('Arsh',78);
+  
+  Set<Student> students = {
+    Student('Sukhman',100),
+    Student('Daksh',60),
+    Student('Harith',98),
+    Student('Eshaan',85),
+    arsh,                                        // Sets have a special property that it prints the redundant data 1 time only
+    arsh,
+    arsh
+  };
+  print(students);
+  print('\n');
+}
 
 
 

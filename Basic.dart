@@ -822,6 +822,55 @@ void main(){
   print('\n');
 }
 
+// or
+
+class Student{
+  final String name;
+  final int marks;
+
+  Student(this.name,this.marks);
+  
+  @override
+  String toString() => 'Student : ${name} - ${marks}';
+}
+void main(){
+  final arsh = Student('Arsh',78);
+  
+  List<Student> students = [
+    Student('Sukhman',100),
+    Student('Daksh',60),
+    Student('Harith',98),
+    Student('Eshaan',85),
+    arsh,
+    arsh,
+    arsh
+  ];
+  print(students.toSet());                          // We can convert a list into set by '.toSet()'
+  print('\n');
+}
+
+
+
+// Map                        (Key-Value pair)
+void main(){
+  Map marks = {
+    'Sukhman' : 100,
+    'Daksh' : 92,
+    'Harith' : 95
+  };
+  print(marks);
+  print('\n');
+  
+  print(marks['Sukhman']);
+  print('\n');
+
+  if(marks['Harith'] == null){
+    print("Key Doesn't exists");
+  }
+  else{
+    print(marks['Harith']!.isEven);
+  }
+}
 
 
 

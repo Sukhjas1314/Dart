@@ -778,12 +778,15 @@ void main(){
   //     filteredStudents.add(students[i]);
   //   }
   // }
-              //or
-  for(final student in students){
-    if(student.marks >= 90){
-      filteredStudents.add(student);
-    }
-  }
+              // or
+  // for(final student in students){
+  //   if(student.marks >= 90){
+  //     filteredStudents.add(student);
+  //   }
+  // }
+              // or
+  final filteredStudents = students.where((student) => student.marks >= 90);
+
   print(filteredStudents);
 }
 

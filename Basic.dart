@@ -773,12 +773,20 @@ void main(){
   print('\n');
   
   List<Student> filteredStudents = [];                    // Making an empty list where we will store the filtered out data
-  for(int i = 0 ; i < students.length ; i++){
-    if(students[i].marks > 90){
-      filteredStudents.add(students[i]);
+  // for(int i = 0 ; i < students.length ; i++){
+  //   if(students[i].marks > 90){
+  //     filteredStudents.add(students[i]);
+  //   }
+  // }
+              //or
+  for(final student in students){
+    if(student.marks >= 90){
+      filteredStudents.add(student);
     }
   }
   print(filteredStudents);
 }
+
+
 
 

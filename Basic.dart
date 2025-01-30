@@ -951,4 +951,47 @@ void main(){
 
 
 
+// Enums
+enum EmployeeType{
+  dataScientist,
+  dataAnalyst,
+  marketing
+}
+
+class Employee{
+  final String name;
+  final EmployeeType type;
+  
+  Employee(this.name,this.type);
+  
+  void fn(){
+    switch(type){
+      case EmployeeType.dataScientist :
+        print('Data Scientist');
+      case EmployeeType.dataAnalyst :
+        print('Data Analyst');
+      case EmployeeType.marketing :
+        print('Data Analyst'); 
+    }
+  }
+}
+
+void main(){
+  final emp1 = Employee('Sukhman', EmployeeType.dataScientist);
+  final emp2 = Employee('Daksh',EmployeeType.dataAnalyst);
+  final emp3 = Employee('Harith',EmployeeType.marketing);
+  
+  emp1.fn();
+  print('\n');
+  
+  emp2.fn();
+  print('\n');
+  
+  emp3.fn();
+  print('\n');  
+}
+
+
+    
+
 

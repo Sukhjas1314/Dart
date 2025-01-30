@@ -992,6 +992,42 @@ void main(){
 }
 
 
+
+  
+enum EmployeeType{
+  dataScientist(15000000),
+  dataAnalyst(7500000),
+  marketing(10000000);
+    
+  final int salary;
+  const EmployeeType(this.salary);
+}
+
+class Employee{
+  final String name;
+  final EmployeeType type;
+  
+  Employee(this.name,this.type);
+  
+  void fn(){
+    print('${type.name} - ₹${type.salary}');
+  }
+}
+
+void main(){
+  final emp1 = Employee('Sukhman', EmployeeType.dataScientist);
+  final emp2 = Employee('Daksh',EmployeeType.dataAnalyst);
+  final emp3 = Employee('Harith',EmployeeType.marketing);
+  
+  emp1.fn();
+  print('\n');
+  
+  emp2.fn();
+  print('\n');
+  
+  emp3.fn();
+  print('\n');  
+}
     
 
 

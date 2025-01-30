@@ -915,4 +915,40 @@ void main(){
 
 
 
+void main(){
+  Map<String,int> marksUserA = {
+      'Math' : 20,
+      'Cs' : 20,
+      'Eng' : 19
+  };
+  
+  List<Map<String,int>> marks = [
+    {
+      'Math' : 10,
+      'Cs' : 14,
+      'Eng' : 15
+    },
+    {
+      'Math' : 19,
+      'Cs' : 17,
+      'Eng' : 12
+    },
+    marksUserA
+  ];
+
+//   marks.map((e) {                // Use of .map() to print the list
+//     print(e);
+//   }).toList();
+//   print('\n');
+  
+          // or
+  marks.map((e) {                   // Use of map and forEach to print each key-value pair separatly
+    e.forEach((key,val) {
+      print('${key} : ${val}');
+    });
+  }).toList();
+  print('\n')
+
+
+
 

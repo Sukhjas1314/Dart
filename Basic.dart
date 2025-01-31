@@ -1066,5 +1066,23 @@ Future<String> givesResultAfter2sec()  {
   });
 }
 
+        // or 
+void main()  {
+  print('Hey');
+  print('Hello');
+  
+  givesResultAfter2sec().then((val){
+    print(val);
+  });
+  
+  print('How are you?');
+}
+
+Future<String> givesResultAfter2sec()  {
+  return Future.delayed(Duration(seconds: 2),() async{
+    return 'Hey!!!!!';
+  });
+}
+
 
   

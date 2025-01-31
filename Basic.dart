@@ -1050,7 +1050,21 @@ void main(){
 
   
 // Futures (promises)
+void main() async {
+  print('Hey');
+  print('Hello');
+  
+  final result = await givesResultAfter2sec();
+  print(result);
+  
+  print('How are you?');
+}
 
+Future<String> givesResultAfter2sec()  {
+  return Future.delayed(Duration(seconds: 2),() async{
+    return 'Hey!!!!!';
+  });
+}
 
 
   

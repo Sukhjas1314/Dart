@@ -1117,3 +1117,26 @@ void main() async{
 }
 
 
+
+import 'dart:async';
+
+void main() async{
+  // Streams
+  countDown();
+}
+
+void countDown(){
+  final controller = StreamController<int>();
+  
+  controller.sink.add(1); 
+  controller.sink.add(2);
+  controller.sink.add(3);
+  controller.sink.add(4);
+  controller.sink.add(5);
+  controller.sink.addError('Hey its an error!!');
+  
+  controller.stream.listen((val) {
+    print(val);
+  });
+}
+

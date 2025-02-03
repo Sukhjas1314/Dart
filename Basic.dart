@@ -1101,17 +1101,17 @@ void main() async {
 
   
 // Streams
-Stream<int> countDown() async*{
+Stream<int> countDown() async* {
   for(int i = 5 ; i > 0 ; i--){
     yield i;
-    await Future.delayed(Duration(seconds : 2));
+    await Future.delayed(Duration(seconds : 2));                    // Giving some delay
   }
 }
   
 void main() async{
   countDown().listen((val) {
     print(val);
-  },onDone : (){
+  },onDone : (){                                                    // On completing the loop it will print the inclusive one
     print('Hey I have completed it!!');
   });
 }

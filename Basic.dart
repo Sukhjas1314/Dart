@@ -1098,4 +1098,22 @@ void main() async {
 }
 
 
+
   
+// Streams
+Stream<int> countDown() async*{
+  for(int i = 5 ; i > 0 ; i--){
+    yield i;
+    await Future.delayed(Duration(seconds : 2));
+  }
+}
+  
+void main() async{
+  countDown().listen((val) {
+    print(val);
+  },onDone : (){
+    print('Hey I have completed it!!');
+  });
+}
+
+

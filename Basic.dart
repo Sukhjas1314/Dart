@@ -1142,3 +1142,19 @@ void countDown(){
 
   controller.close();                                                // closing the controller
 }
+
+
+
+
+// Records
+void main(){
+  final records = (point : 4.5,greeting :'Hi',true,2);
+  print(records);
+  print(records.$2);
+} 
+
+({double point,String greeting}) giveMeSomeDoubles(){
+  return(point : 4.5,greeting : 'Hey!');
+}
+
+

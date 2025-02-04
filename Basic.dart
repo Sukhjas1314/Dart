@@ -1139,4 +1139,6 @@ void countDown(){
   }, onError : (err) {
     print(err);
   });
+
+  controller.close();                                                // closing the controller
 }

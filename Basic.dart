@@ -1118,10 +1118,9 @@ void main() async{
 
 
 
-import 'dart:async';
+import 'dart:async';                                                // Importing dart async
 
 void main() async{
-  // Streams
   countDown();
 }
 
@@ -1137,6 +1136,7 @@ void countDown(){
   
   controller.stream.listen((val) {
     print(val);
+  }, onError : (err) {
+    print(err);
   });
 }
-

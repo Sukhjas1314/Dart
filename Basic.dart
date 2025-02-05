@@ -1185,3 +1185,15 @@ void main(){
       print('Bruh!!!');
   }
 }
+
+
+void main(){
+  int page = 0;
+  int lastPage = 1;
+  final text = switch(page){
+      0 => 'Click Here',
+      1 when page == lastPage => 'Click Me',
+      _ => 'None',
+  };
+  print(text);
+}

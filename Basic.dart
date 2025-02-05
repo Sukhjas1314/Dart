@@ -1207,3 +1207,22 @@ void main(){
   motivation = motivation[0].toUpperCase() + motivation.substring(1);
   print(motivation);  
 }
+
+
+extension CapitaliseFirstLetter on String{
+  String capitaliseFirstLetter(){
+    return this[0].toUpperCase() + substring(1);
+  }
+}
+  
+void main(){
+  String motivation = 'this is a good world';
+  motivation = motivation.capitaliseFirstLetter();
+  print(motivation);  
+  
+  String name = 'sukhman';
+  name = name.capitaliseFirstLetter();
+  print(name);
+}
+
+

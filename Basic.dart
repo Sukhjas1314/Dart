@@ -1173,3 +1173,15 @@ void main(){
   final  [a,b,c,...d] = list; 
   print('$a $c $d');
 }
+
+
+void main(){
+  List<String> listItems = ['Hi','MAN'];
+  int index = 2;
+  switch(listItems){
+    case ['Hi' || 'Hi','MAN'] when index == 2:
+      print('Dude!!');
+    default :
+      print('Bruh!!!');
+  }
+}
